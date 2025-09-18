@@ -1,4 +1,4 @@
-/* Style général */
+/* General Style */
 body {
     font-family: Arial, sans-serif;
     background: #f4f6f9;
@@ -9,13 +9,13 @@ body {
     padding: 30px;
 }
 
-/* Titre */
+/* Title */
 h1 {
     color: #2c3e50;
     margin-bottom: 20px;
 }
 
-/* Zone d'entrée et bouton */
+/* Input area */
 #taskInput {
     padding: 10px;
     width: 250px;
@@ -25,6 +25,7 @@ h1 {
     font-size: 14px;
 }
 
+/* Add Task Button */
 #addTaskButton {
     padding: 10px 15px;
     border: none;
@@ -41,7 +42,7 @@ h1 {
     background: #2980b9;
 }
 
-/* Liste des tâches */
+/* Task List */
 #taskList {
     list-style: none;
     padding: 0;

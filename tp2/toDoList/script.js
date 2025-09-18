@@ -5,16 +5,22 @@ let tasks = [];
 
 // Event listeners for adding tasks
 document.getElementById('addTaskButton').addEventListener("click", addTask);
-document.getElementById('addTaskButton').addEventListener("keypress", function (event) {
+
+// Allow adding task by pressing Enter key
+document.getElementById('taskInput').addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         addTask();
     }
 });
+
+// Event listener for clearing all tasks
 document.getElementById('clearTasksButton').addEventListener("click", function() { 
     tasks = [];
-    showTasks(); 
+    showTasks(tasks); 
     saveTasks();
 });
+
+// Event listener for searching tasks
 document.getElementById('searchInput').addEventListener("input", function(event) {
     const searchText = event.target.value.toLowerCase();
     const filteredTasks = tasks.filter(task => task.text.toLowerCase().includes(searchText));
@@ -76,17 +82,21 @@ function showTasks(tasks) {
         // Create the terminate button
         const terminateButton = document.createElement("button");
         terminateButton.textContent = "Terminer"
-        terminateButton.addEventListener("click", () => terminateTask(index));
+        terminateButton.addEventListener("click", () => terminateTask(index, tasks));
 
         // Create the delete button
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Supprimer"
-        deleteButton.addEventListener("click", () => deleteTask(index));
+        deleteButton.addEventListener("click", () => deleteTask(index, tasks));
+
+        const div = document.createElement("div");
+        div.className = "buttons";
+        div.appendChild(terminateButton);
+        div.appendChild(deleteButton);
 
         // Append content and buttons to the list item
         li.appendChild(content)
-        li.appendChild(terminateButton);
-        li.appendChild(deleteButton);
+        li.appendChild(div);
 
         // Append the list item to the task list
         taskList.appendChild(li);
@@ -99,9 +109,9 @@ function showTasks(tasks) {
  * @param {*} index Index of the task in the array
  * 
  */
-function terminateTask(index) {
+function terminateTask(index, tasks) {
     tasks[index].terminated = !tasks[index].terminated; // Toggle the status
-    showTasks(); // Update the display
+    showTasks(tasks); // Update the display
     saveTasks(); // Save to local storage
 }
 
@@ -110,9 +120,9 @@ function terminateTask(index) {
  * Delete a task from the list
  * @param {*} index Index of the task in the array
  */
-function deleteTask(index) {
+function deleteTask(index, tasks) {
     tasks.splice(index, 1);
-    showTasks(); // Update the display
+    showTasks(tasks); // Update the display
     saveTasks(); // Save to local storage
 }
 
