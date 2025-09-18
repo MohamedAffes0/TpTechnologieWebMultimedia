@@ -89,3 +89,29 @@ h1 {
 #taskList button:last-of-type:hover {
     background: #c0392b;
 }
+
+#clearTasksButton {
+    padding: 10px 15px;
+    border: none;
+    background: #e74c3c;
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin: 30px;
+}
+
+#clearTasksButton:hover {
+    background: #c0392b;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 14px;
+    margin-top: 20px;
+}

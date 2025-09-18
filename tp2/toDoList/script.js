@@ -10,6 +10,17 @@ document.getElementById('addTaskButton').addEventListener("keypress", function (
         addTask();
     }
 });
+document.getElementById('clearTasksButton').addEventListener("click", function() { 
+    tasks = [];
+    showTasks(); 
+    saveTasks();
+});
+document.getElementById('searchInput').addEventListener("input", function(event) {
+    const searchText = event.target.value.toLowerCase();
+    const filteredTasks = tasks.filter(task => task.text.toLowerCase().includes(searchText));
+    
+    showTasks(filteredTasks);
+});
 
 /**
  * 
@@ -34,7 +45,7 @@ function addTask() {
 
     taskInput.value = "";
 
-    showTasks(); // Update the display
+    showTasks(tasks); // Update the display
     saveTasks(); // Save to local storage
 }
 
@@ -42,7 +53,7 @@ function addTask() {
  * 
  * Display the tasks in the list
  */
-function showTasks() {
+function showTasks(tasks) {
     // Get the task list element    
     const taskList = document.getElementById('taskList');
 
@@ -123,7 +134,7 @@ function loadTasks() {
         tasks = JSON.parse(data);
     }
 
-    showTasks(); // Update the display
+    showTasks(tasks); // Update the display
 }
 
 window.onload = loadTasks(); // Load tasks when the page is loaded

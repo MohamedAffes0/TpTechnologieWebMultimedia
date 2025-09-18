@@ -9,7 +9,11 @@
     <body>
         <h1>Ma To-Do List</h1>
         <input type="text" id="taskInput" placeholder="Nouvelle tâche...">
-        <input type="button" value="Ajouter une tâche" id="addTaskButton">
+        <div>
+            <input type="button" value="Ajouter une tâche" id="addTaskButton">
+            <input type="button" value="Supprimer tous les tâches" id="clearTasksButton">
+        </div>
+        <input type="text" id="searchInput" placeholder="Rechercher une tâche...">
         <ul id="taskList"></ul>
 
         <script src="script.js"></script>
