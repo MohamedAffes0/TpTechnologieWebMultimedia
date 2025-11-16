@@ -1,0 +1,26 @@
+# Node modules (pour tous les projets)
+**/node_modules/
+
+# Build output
+**/dist/
+**/out-tsc/
+**/target/
+**/build/
+
+# Angular specific
+**/.angular/
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment files (optionnel, si tu ne veux pas versionner les secrets)
+**/src/environments/*.ts

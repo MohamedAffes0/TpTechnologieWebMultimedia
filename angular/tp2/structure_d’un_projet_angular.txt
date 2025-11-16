@@ -1,0 +1,10 @@
+| Élément          | Rôle                                                                      |
+| ---------------- | ------------------------------------------------------------------------- |
+| src/app          | Contient les composants                                                   |
+| src/assets       | Contient les fichiers statiques (images, JSON, icônes...)                 |
+| src/environments | Contient les variables d’environnement (prod/dev)                         |
+| src/main.ts      | Point d’entrée TypeScript de l’application, lance AppModule               |
+| src/index.html   | Fichier HTML principal, contient la balise `<app-root>`                   |
+| angular.json     | Fichier de configuration du projet pour Angular CLI                       |
+| package.json     | Liste les dépendances et scripts npm                                      |
+| tsconfig.json    | Configure le compilateur TypeScript                                       |

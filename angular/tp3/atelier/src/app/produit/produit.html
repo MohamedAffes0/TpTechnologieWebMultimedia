@@ -1,0 +1,24 @@
+<img [src]="imageUrl" alt="Produit" width="80px">
+
+<br>
+
+<button (click)="afficherAlerte()">Ajouter au panier</button>
+
+<br>
+
+<div [class.en-stock]="enStock" [class.hors-stock]="!enStock" [style.opacity]="enStock ? '1' : '0.5'">
+    <h3>Nom du Produit</h3>
+    <p>Description du produit...</p>
+</div>
+
+<button (click)="toggleStock()">
+    {{ enStock ? 'Marquer comme Hors Stock' : 'Marquer comme En Stock' }}
+</button>
+
+<button (click)="ajouterProduit()" [disabled]="!enStock">
+    Ajouter au Panier
+</button>
+
+<p>Prix : {{ prix }}</p>
+
+

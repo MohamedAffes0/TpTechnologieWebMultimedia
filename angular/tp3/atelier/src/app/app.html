@@ -1,0 +1,8 @@
+<app-bienvenue></app-bienvenue>
+<app-utilisateur></app-utilisateur>
+<app-produit
+  [nomProduit]="'Ordinateur Portable'"
+  (ajouterAuPanier)="gererAjoutAuPanier($event)">
+</app-produit>
+
+<app-panier [items]="panierItems"></app-panier>
