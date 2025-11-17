@@ -1,0 +1,21 @@
+.tache {
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f0f0f0;
+}
+
+.terminee {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+button {
+    margin-left: 15px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -1,0 +1,71 @@
+/* ----------- Layout général ----------- */
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+/* ----------- Inputs & select ----------- */
+input[type="text"],
+select {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #fff;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 3px rgba(74, 144, 226, 0.4);
+}
+
+/* ----------- Labels ----------- */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #444;
+}
+
+/* ----------- Info texte ----------- */
+p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* ----------- Cards de sections ----------- */
+section,
+.container {
+    padding: 20px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+/* ----------- Liste des livres ----------- */
+app-book-list {
+    display: block;
+    margin-top: 20px;
+}
+
+/* ----------- Responsive ----------- */
+@media (max-width: 600px) {
+    input[type="text"],
+    select {
+        max-width: 100%;
+    }
+}

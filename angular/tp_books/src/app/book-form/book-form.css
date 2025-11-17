@@ -2,3 +2,86 @@
     border-left: 5px solid red;
     padding-left: 5px;
 }
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Groupes de champs */
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #1e293b;
+    font-size: 14px;
+}
+
+/* Champs de saisie */
+input,
+select {
+    border: 1px solid #d1d5db;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Focus élégant */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* Checkbox alignée */
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    accent-color: #2563eb;
+}
+
+/* Erreurs */
+.error {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* Bouton */
+button {
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    background: #2563eb;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover:not([disabled]) {
+    background: #1d4ed8;
+}
+
+button:active:not([disabled]) {
+    transform: scale(0.97);
+}
+
+button[disabled] {
+    background: #94a3b8;
+    cursor: not-allowed;
+}

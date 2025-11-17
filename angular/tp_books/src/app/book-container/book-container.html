@@ -1,16 +1,16 @@
-<h2>Ajouter un livre</h2>
+<h1 align="center" style="color: rgb(86, 86, 255);">Ajouter un livre</h1>
 <app-book-form [categories]="categories" (saveBook)="addOrUpdateBook($event)" [book]="selectedBook || { title: '', author: '', category: '', isAvailable: true, publisherEmail: '', publisherPhone: '', releaseDate: '', stock: 0 }"></app-book-form>
 
 <br>
 
-<div>
+<div align="center">
     <label for="search">Rechercher un livre :</label>
     <input type="text" id="search" [(ngModel)]="searchText" placeholder="Titre ou auteur..." />
 </div>
 
 <br>
 
-<div>
+<div align="center">
     <label for="sort">Trier par :</label>
     <select id="sort" [(ngModel)]="sortKey">
         <option value="">-- Aucun --</option>
@@ -19,7 +19,7 @@
     </select>
 </div>
 
-<p>Nombre total de livres : {{ books.length }}</p>
+<h3 align="center">Nombre total de livres : {{ books.length }}</h3>
 
-<h2>Liste des livres</h2>
+<h1 align="center" style="color: rgb(86, 86, 255);">Liste des livres</h1>
 <app-book-list [books]="sortedBooks" (deleteBook)="deleteBook($event)" (updateBook)="updateBook($event)"></app-book-list>
